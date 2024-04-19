@@ -1,0 +1,73 @@
+.nav-icon {
+    width: 46px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Добавьте это свойство */
+    transition:  all 0.5s linear;
+    &:hover {
+      transform: translateX(3px);
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  .nav-icon:hover .nav-icon__middle,
+  .nav-icon:hover .nav-icon__middle::before,
+  .nav-icon:hover .nav-icon__middle::after {
+    background: $color-accent;
+   
+  }
+
+.nav-icon__middle {
+  position: relative;
+  width: 46px;
+  height: 2px;
+  background-color: black;
+}
+.nav-icon__middle::before, .nav-icon__middle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 46px;
+  height: 2px;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  background-color: black;
+}
+.nav-icon__middle::before {
+  top: -15px;
+}
+.nav-icon__middle::after {
+  top: 15px;
+}
+
+/* Active state */
+.nav-icon.nav-icon--active {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: 10;
+  transform: translateX(0px);
+}
+
+.nav-icon.nav-icon--active .nav-icon__middle {
+  background-color: transparent;
+}
+.nav-icon.nav-icon--active .nav-icon__middle::before, .nav-icon.nav-icon--active .nav-icon__middle::after {
+  top: 0;
+  transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  background-color: $color-accent;
+  z-index: 10;
+}
+.nav-icon.nav-icon--active .nav-icon__middle::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.nav-icon.nav-icon--active .nav-icon__middle::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}

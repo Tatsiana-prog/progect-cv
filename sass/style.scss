@@ -1,0 +1,31 @@
+@font-face { 
+    font-family: "SF Pro Text";
+    src: url(../assets/fonts/SFProText/SFProText-Regular.ttf) format("ttf"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+         url(../assets/fonts/SFProText/SFProText-Regular.woff)  format("woff"), /* все современные браузеры, IE9+ */
+    }
+
+
+@import 'abstracts/constants';
+
+@import 'base/reset';
+@import 'base/typography';
+
+//components
+@import 'components/buttons';
+@import 'components/drops';
+@import 'components/slider';
+@import 'components/radiobuttons';
+
+//layout
+@import 'layout/header';
+@import 'layout/modal';
+@import 'layout/modal-icon';
+@import 'layout/footer';
+
+//pages
+@import 'pages/section-description';
+@import 'pages/section-about';
+@import 'pages/section-skills';
+@import 'pages/section-work';
+@import 'pages/section-reviews';
+@import 'pages/section-contacts';

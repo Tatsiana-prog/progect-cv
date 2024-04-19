@@ -1,0 +1,65 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 12px 63px;
+    width: 232px;
+    border-radius: 15px;
+    background: $color-dark;
+    border: 1px solid $color-dark;
+    color:$color-white;
+    font-size: 30px;
+    font-family: 'SF Pro Text', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    transition:  all 0.5s linear;
+    &:hover {
+        background: $color-white;
+        color:$color-black;
+        border: 1px solid $color-black;
+    }
+}
+
+.btn.btn-white {
+    padding: 12px 58px;
+    background: $color-white;
+    color:$color-dark;
+    border: 1px solid $color-dark;
+    text-align: center;
+    font-size: 25px;
+    &:hover {
+        background: rgba(56, 56, 56 , 0.03);
+        border: 1px solid $color-dark;
+    }
+}
+.btn-close, .btn-close2 {
+    position: absolute;
+    top:5px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+.close-letter {
+    position: absolute;
+    top:5px;
+    right: 20px;
+    cursor: pointer;
+}
+.btn-out {
+    display: inline;
+    color:$color-accent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-countries {
+    font-size: 14px;
+    color: $color-accent;
+    text-decoration: underline;
+    
+}
+.window-close {
+    position: absolute;
+    top:5px;
+    right: 10px;
+}

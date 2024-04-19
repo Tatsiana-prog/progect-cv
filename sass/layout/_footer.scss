@@ -1,0 +1,29 @@
+
+.footer {
+    padding: 25px 0;
+    background: $color-dark;
+}
+.container {
+}
+.footer__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social {
+}
+.footer .footer__row .social .social-icon:hover {
+    transform: scale(1.2);
+    transition:  all 0.5s linear;
+    & .icon-accent {
+        stroke:$color-white;
+    }
+}
+.icon-accent {
+}
+.footer__text {
+    color:rgba(255, 255, 255, 0.5);
+}
+
+.footer__block {
+}

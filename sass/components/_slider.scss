@@ -1,0 +1,99 @@
+.arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 81px;
+}
+
+.button-prev,
+.button-next,
+.slider-wrapper
+ {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.button-prev {
+ 
+}
+.button-next:hover .arrow-hover {
+     transform: translateX(3px);
+     stroke: $color-accent;
+     transition: transform 0.3s ease;
+} 
+.button-prev:hover .arrow-hover {
+    transform: translateX(-3px);
+    stroke: $color-accent;
+    transition: transform 0.3s ease;
+} 
+
+.button-prev:active .button-color,
+.button-next:active .button-color {
+  stroke: red;
+  stroke-opacity: .5;
+}
+
+.slider-line {
+  display: flex;
+ position: relative;
+ column-gap: 50px;
+  left: 0;
+  transition: 2s ease-out;   
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.review {
+  position: relative;
+  padding: 42px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 370px;
+  border-radius: 15px;
+  background: rgba(56, 56, 56, 0.03);
+  color: $color-black;
+}
+
+.review__text {
+  width: 320px;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.review__name {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.review__doc {
+    color:$color-accent;
+    &:hover {
+        text-decoration: underline;
+        color:$color-accent;
+    }
+}
+
+
+
+
+.review:last-child {
+  margin-right: 0;
+}
+
+//скроллбар
+.reviews-letter .ps__thumb-x,
+.reviews-letter .ps__thumb-y {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.reviews-letter .ps__thumb-x:hover,
+.reviews-letter .ps__thumb-y:hover {
+  background-color: #555;
+}

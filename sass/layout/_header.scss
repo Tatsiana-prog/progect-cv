@@ -1,0 +1,54 @@
+
+
+.header {
+    padding:30px 0 11px 0;
+}
+
+.header-row {
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    column-gap: 18px ;
+    align-items: center;
+}
+.social-icon img {
+    width: 33px;
+    height: 33px;
+}
+.social-icon:hover {
+    .icon-accent {
+        stroke:$color-accent;
+        transition:  all 0.5s linear;
+    }
+}
+.header-languages {
+}
+
+select {
+    font-size: 20px;
+    text-transform:uppercase;
+    background: transparent;
+    border: none;
+    &:hover {
+        color:$color-accent;
+        text-decoration: underline;
+    }
+}
+
+.header__nav {
+    position: relative;
+}
+.header-modal {
+}
+.modal-icon {
+    width: 60px;
+    height: 60px;
+    background: red;
+}
+.modal {
+}

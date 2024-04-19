@@ -1,0 +1,63 @@
+/*radiobuttons for menu*/
+.menu_products-buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 29px;
+    margin-bottom: 21px;
+}
+ .custom {
+    position: absolute;
+    opacity: 0;
+ }
+ .name-product {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.37);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+ }
+ 
+  .custom:checked + .menu_product .name-product {
+    /* Ваши стили для кнопки в чекнутом состоянии */
+    color: #000000; /* Черный цвет шрифта */
+    border-bottom: 1px solid #000000;
+  }
+  
+  #general:checked ~ .skills__row #general-list,
+  #general:not(:checked) ~ .skills__row #programmes-list {
+    display: block;  animation: fadeIn 3s ease forwards;
+    
+   
+  }
+  
+  #programs:checked ~ .skills__row #programmes-list {
+    display: block;
+   
+  }
+  .fade-in {
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+  }
+  
+  .fade-out {
+    animation: fadeOut 2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,107 @@
+.section-work {
+    padding-top: 150px;
+    padding-bottom: 125px;
+}
+.container {
+}
+.work {
+}
+.work__action {
+    margin-bottom: 215px;
+}
+.work__action-title {
+    margin-bottom: 67px;
+}
+.title-2 {
+}
+.work__list-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    margin-bottom: 93px;
+}
+.work__list {
+    width: 435px;
+}
+.work__item {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+    color:$color-black;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $color-dark;
+        top:5px;
+        left: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+#contacts {
+}
+//block expectations(МОИ ОЖИДАНИЯ)
+
+
+.work__expectations.accordeon {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    margin-bottom: 321px;
+}
+.work__expectations-title {
+    margin-bottom: 78px;
+    text-align: center;
+}
+.answer__link {
+    color:$color-accent;
+    text-decoration: underline;
+}
+
+
+
+.work__interest {
+    max-width: 1084px;
+    margin:  auto;
+    padding-bottom: 184px;
+    
+    border-bottom: 1px solid $color-accent;
+}
+.work__interest-title {
+    margin-bottom: 72px ;
+    text-align: center;
+}
+.list-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    padding-bottom: 188px 166px;
+   
+}
+.work__interest-list {
+    width: 295px;
+}
+
+.work__interest-item {
+    width: 100%;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.interest__icon {
+    display: block;
+    object-fit: cover;
+}
+.interest__name {
+    display: block;
+    font-size: 16px;
+    color:$color-black;
+}
