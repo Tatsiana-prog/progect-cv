@@ -1,12 +1,13 @@
 html {
    	scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: hidden;
+    
 }
 
 body {
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
     padding: 0;
     min-width: 320px;
@@ -16,6 +17,7 @@ body {
     line-height: 1.2;
     color:$color-dark;
     background: $color-white;
+    overflow-x: hidden;
 }
 
 body > * {
@@ -27,6 +29,7 @@ body > * {
 
 img {
     object-fit: cover;
+    //width: 100%;
 }
 
 span {
@@ -44,37 +47,92 @@ ul {
 .wrapper {
     width: 1440px;
     padding: 0;
-    margin:0 auto;
-    //background: rgb(216, 199, 231);
+    background:$color-white;
+    overflow-x: hidden;
+    margin: 0 auto;
+    //*tablet big
+    @media (max-width: 1199px) {
+        width: 1199px;
+    }
+    //*tablet small
+    @media (max-width: 991px) {
+        width: 991px;
+    }
+    //*mobile big
+    @media (max-width: 768px) {
+        max-width: 768px;
+    }
+     //*mobile
+     @media (max-width: 575px) {
+        width: 575px;
+    }
+    //*mobile xs
+    @media (max-width: 430px) {
+        width: 430px;
+    }
+    //*mobile xxs
+    @media (max-width: 331px) {
+        width: 320px;
+    } 
+   
 }
 
 .container {
-    width: 1360px;
+    width: 1368px;
     padding: 0px 36px;
     height: 100%;
     margin: 0 auto;
-}
-   /* //*mobile
+    //*tablet big
+    @media (max-width: 1199px) {
+        width: 992px;
+    }
+    //*tablet small
+    @media (max-width: 991px) {
+        width: 769px;
+    }
+    //*mobile big
     @media (max-width: 768px) {
-        width: 748px;
-       }
+        width: 575px;
+    }
+    //*mobile
+    @media (max-width: 575px) {
+        width: 431px;
+    }
     //*mobile xs
-    @media (max-width: 375px) {
-        width: 333px;
+    @media (max-width: 430px) {
+        width: 370px;
+        padding: 0 5px ;
+    }
+    //*mobile xxs
+    @media (max-width: 320px) {
+        width: 290px;
     }
 
-}*/
+}
 
 .title-1 {
     font-size: 85px;
     font-weight: 500;
     color:$color-black;
     letter-spacing: -8px;
+    //*mobile
+    @media (max-width: 768px) {
+        font-size: 35px;
+        text-align: center;
+        letter-spacing: 0;
+        font-weight: 800;
+      }
 }
 
 .title-2 {
     font-size: 50px;
     font-weight: 500;
+    //*mobile big
+    @media (max-width: 768px) {
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+    }
 }
 
 .title-3 {

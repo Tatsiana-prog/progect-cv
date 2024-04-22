@@ -7,11 +7,31 @@
 .work {
 }
 .work__action {
+    position: relative;
     margin-bottom: 215px;
+}
+
+
+.work__action::before {
+    top:-150px;
+    left: 0;
+    transform: translateX(50%);
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background: $color-accent;
 }
 .work__action-title {
     margin-bottom: 67px;
+    //*mobile big
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
 .title-2 {
 }
 .work__list-wrapper {
@@ -19,9 +39,20 @@
     justify-content: center;
     column-gap: 50px;
     margin-bottom: 93px;
+     //*mobile big
+     @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 33px;
+      }
 }
 .work__list {
+    display: inline-block;
     width: 435px;
+    //*mobile big
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0 auto;
+      }
 }
 .work__item {
     position: relative;
@@ -52,6 +83,12 @@
     justify-content: center;
     column-gap: 50px;
     margin-bottom: 321px;
+     //*mobile big
+     @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 15px;
+        margin-bottom: 130px;
+      }
 }
 .work__expectations-title {
     margin-bottom: 78px;
@@ -65,11 +102,19 @@
 
 
 .work__interest {
+    position: relative;
     max-width: 1084px;
     margin:  auto;
-    padding-bottom: 184px;
-    
-    border-bottom: 1px solid $color-accent;
+    &::before {
+        position: absolute;
+        content:"";
+        bottom: -20%;
+        left: 0;
+        transform: translateX(50%);
+        width: 50%;
+        height: 1px;
+        background-color: $color-accent;
+    }
 }
 .work__interest-title {
     margin-bottom: 72px ;
@@ -79,11 +124,27 @@
     display: flex;
     justify-content: center;
     column-gap: 50px;
-    padding-bottom: 188px 166px;
-   
+    padding-bottom: 166px;
+     //*mobile big
+     @media (max-width: 768px) {
+        padding-bottom: 0px;
+        flex-direction: column;
+        row-gap: 15px;
+    }
 }
+
 .work__interest-list {
     width: 295px;
+     //*mobile big
+     @media (max-width: 768px) {
+        width: 60%;
+        margin: 0 auto;
+    }
+    //*mobile xs
+    @media (max-width: 430px) {
+        width: 90%;
+       
+    }
 }
 
 .work__interest-item {
