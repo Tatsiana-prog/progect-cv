@@ -53,3 +53,21 @@ openBtnCountries .addEventListener('click', openModalCountries);
 
 // Добавляем обработчик события клика на кнопку закрытия модального окна
 closeBtnCountries .addEventListener('click', closeModalCountries);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Находим элементы
+  const footerSecq = document.querySelector(".footer__secq");
+  const windowSecq = document.querySelector(".window-secq");
+  const modalClose = document.getElementById("modal-close");
+
+  // Показываем модальное окно при клике на кнопку
+  footerSecq.addEventListener("click", function() {
+      windowSecq.style.display = "block";
+  });
+
+  // Закрываем модальное окно при клике на кнопку "Закрыть"
+  modalClose.addEventListener("click", function() {
+      windowSecq.style.display = "none";
+  });
+});

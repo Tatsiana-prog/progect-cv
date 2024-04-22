@@ -25,8 +25,9 @@ const sliderLine = document.querySelector('.slider-line');
 const prevButton = document.querySelector('.button-prev');
 const nextButton = document.querySelector('.button-next');
 let positionRev = 0;
+let touchStartX = 0;
+let touchMoveX = 0;
 
-// Функция для переключения на следующий слайд
 const nextSlideRev = () => {
   if (positionRev < (sliderLine.children.length - 1) * 420) {
     positionRev += 420;
@@ -36,7 +37,6 @@ const nextSlideRev = () => {
   sliderLine.style.left = -positionRev + 'px';
 };
 
-// Функция для переключения на предыдущий слайд
 const prevSlideRev = () => {
   if (positionRev > 0) {
     positionRev -= 420;
@@ -46,9 +46,30 @@ const prevSlideRev = () => {
   sliderLine.style.left = -positionRev + 'px';
 };
 
-// Обработчики событий для кликов на стрелки
+const handleTouchStart = (event) => {
+  touchStartX = event.touches[0].clientX;
+};
+
+const handleTouchMove = (event) => {
+  touchMoveX = event.touches[0].clientX;
+};
+
+const handleTouchEnd = () => {
+  const difference = touchStartX - touchMoveX;
+  if (difference > 0) {
+    nextSlideRev();
+  } else if (difference < 0) {
+    prevSlideRev();
+  }
+};
+
 nextButton.addEventListener('click', nextSlideRev);
 prevButton.addEventListener('click', prevSlideRev);
+
+sliderLine.addEventListener('touchstart', handleTouchStart);
+sliderLine.addEventListener('touchmove', handleTouchMove);
+sliderLine.addEventListener('touchend', handleTouchEnd);
+
 
 //подключение карусели end
 
@@ -57,12 +78,13 @@ prevButton.addEventListener('click', prevSlideRev);
 
 
 //показ окон в блоке experience
-const experienceBlocks = document.querySelectorAll('.experience__row-first .experience__block, .experience__row-second .experience__block');
-const experienceScrolls = document.querySelectorAll('.experience__row-first .experience__scroll, .experience__row-second .experience__scroll');
-const experienceContents = document.querySelectorAll('.experience__row-first .experience__content, .experience__row-second .experience__content');
+const experienceBlocks = document.querySelectorAll('.experience__column .experience__block');
+const experienceScrolls = document.querySelectorAll('.experience__column .experience__scroll');
+const experienceContents = document.querySelectorAll('.experience__column .experience__content');
 
 for (let i = 0; i < experienceBlocks.length; i++) {
   experienceScrolls[i].addEventListener('click', () => {
     experienceContents[i].classList.toggle('show');
   });
 }
+
