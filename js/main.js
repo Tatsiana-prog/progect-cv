@@ -69,10 +69,18 @@ prevButton.addEventListener('click', prevSlideRev);
 sliderLine.addEventListener('touchstart', handleTouchStart);
 sliderLine.addEventListener('touchmove', handleTouchMove);
 sliderLine.addEventListener('touchend', handleTouchEnd);
-
-
 //подключение карусели end
 
+//копирование ссылки в буфер обмена
+function copyToClipboard() {
+  var link = "https://www.example.com"; // Здесь ты можешь указать свою ссылку
+  var tempInput = document.createElement("input");
+  tempInput.value = link;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+  alert("Ссылка скопирована в буфер обмена!");}
 
 
 

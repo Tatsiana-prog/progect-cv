@@ -187,17 +187,17 @@ ul {
   display: flex;
   justify-content: center;
   padding: 12px 63px;
-  width: 232px;
+  width: 269px;
   border-radius: 15px;
   background: #383838;
   border: 1px solid #383838;
   color: #ffffff;
   font-size: 30px;
   font-family: 'SF Pro Text', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   margin: 0 auto;
-  transition: all 0.5s linear; }
+  transition: all 0.25s linear; }
   @media (max-width: 430px) {
     .btn {
       width: 214px;
@@ -923,13 +923,13 @@ ul {
   width: 85%;
   height: 20px;
   top: 2px;
-  left: -30px;
+  left: 0px;
   background: url(../img/about/item-1.png) no-repeat center;
   background-size: cover; }
   @media (max-width: 991px) {
     .text-element1::before {
       width: 70%;
-      left: -15px; } }
+      left: 0px; } }
 
 .text-element2::before {
   position: absolute;
@@ -937,13 +937,13 @@ ul {
   width: 100%;
   height: 20px;
   top: 2px;
-  left: -20px;
+  left: 0px;
   background: url(../img/about/item-2.png) no-repeat center;
   background-size: cover; }
   @media (max-width: 991px) {
     .text-element2::before {
       width: 77%;
-      left: -10px; } }
+      left: 0px; } }
 
 .text-element3::before {
   position: absolute;
@@ -951,13 +951,13 @@ ul {
   width: 70%;
   height: 17px;
   top: 2px;
-  left: -30px;
+  left: 0px;
   background: url(../img/about/item-3.png) no-repeat center;
   background-size: cover; }
   @media (max-width: 991px) {
     .text-element3::before {
       width: 52%;
-      left: -12px; } }
+      left: 0px; } }
 
 .about__person {
   position: relative;
@@ -1136,8 +1136,8 @@ ul {
 .experience__content.show {
   display: block;
   position: absolute;
-  left: 0%;
-  bottom: -250px;
+  left: 12%;
+  top: 65%;
   padding: 14px 27px;
   border-radius: 15px;
   border: 1px solid #000;
@@ -1148,20 +1148,33 @@ ul {
   font-size: 14px;
   line-height: 1.9;
   color: #000; }
-  @media (max-width: 768px) {
-    .experience__content.show {
-      width: 410px;
-      height: auto;
-      bottom: -160%;
-      left: 10%; } }
-  @media (max-width: 575px) {
-    .experience__content.show {
-      width: 290px;
-      bottom: -205%;
-      left: 10%; } }
-  @media (max-width: 430px) {
-    .experience__content.show {
-      width: 280px; } }
+
+/* //*mobile big
+ @media (max-width: 768px) {
+    width: 410px;
+    height: auto;
+    bottom: -160%;
+    left: 10%;
+ }
+    //*mobile xs
+ @media (max-width: 575px) {
+     width: 290px;
+     bottom: -205%;
+     left: 10%;
+ }
+ //*mobile xs
+ @media (max-width: 430px) {
+     width: 280px;
+ }
+ }
+ */
+.experience__column:nth-child(1) .experience__content.show, .experience__column:nth-child(3) .experience__content.show, .experience__column:nth-child(5) .experience__content.show {
+  left: 0%;
+  top: 110%; }
+
+.experience__column:nth-child(5) .experience__content.show {
+  left: -150%;
+  top: 80%; }
 
 .experience__content.show ul {
   list-style-type: disc;

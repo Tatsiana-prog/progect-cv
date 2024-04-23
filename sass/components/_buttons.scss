@@ -2,17 +2,17 @@
     display: flex;
     justify-content: center;
     padding: 12px 63px;
-    width: 232px;
+    width: 269px;
     border-radius: 15px;
     background: $color-dark;
     border: 1px solid $color-dark;
     color:$color-white;
     font-size: 30px;
     font-family: 'SF Pro Text', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     margin: 0 auto;
-    transition:  all 0.5s linear;
+    transition:  all 0.25s linear;
     //*mobile xs
     @media (max-width: 430px) {
         width: 214px;
