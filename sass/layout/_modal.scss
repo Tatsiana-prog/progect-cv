@@ -25,25 +25,29 @@
     }
   
     .nav a {
-      margin-right: 0;
+      display: inline-block;
+      //width: 50%;
+      text-align: left;
       margin-top: 30px;
       font-size: 20px;
       color: $color-black;
       padding-bottom: 5px;
       border-bottom: 2px solid transparent;
-      transition: all 0.5s linear;
       &:hover {
+        transition: all 0.3s ease-in;
         font-weight: 500;
         border-bottom: 2px solid $color-black;
+        font-weight: 700;
       }
     }
-  
+    
     .nav.nav--active {
-      display: flex;
+      display: block;
       top: -28px;
       right: -21px;
       opacity: 1;
       transition: top 0s linear, opacity .2s ease-in;
+      z-index: 11;
     }
   
    
