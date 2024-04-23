@@ -59,24 +59,61 @@
     height: 33px;
 }
 .social-icon:hover {
+    transform: scale(1.1);
+    transition: all 0.5s linear;
     .icon-accent {
         stroke:$color-accent;
         transition:  all 0.5s linear;
     }
 }
-.header-languages {
+
+.header__languages {
+    position: relative;
 }
 
-select {
+#selected-language-name {
+    margin-right: 5px;
+    color :$color-black;
     font-size: 20px;
-    text-transform:uppercase;
-    background: transparent;
-    border: none;
     &:hover {
+        transition: all 1s linear;
         color:$color-accent;
         text-decoration: underline;
     }
 }
+
+.icon-select {
+    transition: all 0.5s linear;
+    transform:rotate(90deg);
+}
+
+
+.options-list {
+    display: none;
+    position: absolute;
+    top:30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    z-index: 1;
+    text-align: left;
+}
+
+.options-list li {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 2px 0;
+    cursor: pointer;
+    &:hover {
+        color:$color-accent;
+    }
+}
+
+
+
+
 
 .header__nav {
     position: relative;

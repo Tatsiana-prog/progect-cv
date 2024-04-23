@@ -76,7 +76,6 @@ sliderLine.addEventListener('touchend', handleTouchEnd);
 
 
 
-
 //показ окон в блоке experience
 const experienceBlocks = document.querySelectorAll('.experience__column .experience__block');
 const experienceScrolls = document.querySelectorAll('.experience__column .experience__scroll');
@@ -86,5 +85,10 @@ for (let i = 0; i < experienceBlocks.length; i++) {
   experienceScrolls[i].addEventListener('click', () => {
     experienceContents[i].classList.toggle('show');
   });
+}
+
+function selectItem(value) {
+  var label = document.querySelector('.dropdown-label');
+  label.textContent = value; // Use textContent to update label text
 }
 

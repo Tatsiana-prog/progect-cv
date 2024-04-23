@@ -83,7 +83,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   color: #383838;
-  background: #d4c1e6;
+  background: #ffffff;
   overflow-x: hidden; }
 
 body > * {
@@ -432,18 +432,48 @@ ul {
   width: 33px;
   height: 33px; }
 
-.social-icon:hover .icon-accent {
-  stroke: #FF5C31;
+.social-icon:hover {
+  transform: scale(1.1);
   transition: all 0.5s linear; }
+  .social-icon:hover .icon-accent {
+    stroke: #FF5C31;
+    transition: all 0.5s linear; }
 
-select {
-  font-size: 20px;
-  text-transform: uppercase;
-  background: transparent;
-  border: none; }
-  select:hover {
+.header__languages {
+  position: relative; }
+
+#selected-language-name {
+  margin-right: 5px;
+  color: #000000;
+  font-size: 20px; }
+  #selected-language-name:hover {
+    transition: all 1s linear;
     color: #FF5C31;
     text-decoration: underline; }
+
+.icon-select {
+  transition: all 0.5s linear;
+  transform: rotate(90deg); }
+
+.options-list {
+  display: none;
+  position: absolute;
+  top: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  z-index: 1;
+  text-align: left; }
+
+.options-list li {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  padding: 2px 0;
+  cursor: pointer; }
+  .options-list li:hover {
+    color: #FF5C31; }
 
 .header__nav {
   position: relative; }

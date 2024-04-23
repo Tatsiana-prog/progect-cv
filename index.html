@@ -32,13 +32,18 @@
 								</svg>
 							</a>
 						</div>
-						<div class="header-languages">
-							<select>
-								<option>ru</option>
-								<option>en</option>
-								<option>de</option>
-							</select>
+						<div class="header__languages">
+							<div class="custom-select">
+							  <div id="selected-language">
+								<span id="selected-language-name"></span><span class="icon-select">&#8250;</span>
+							  </div>
+							  <ul class="options-list">
+								<!-- Опции будут добавлены динамически с помощью JavaScript -->
+							  </ul>
+							</div>
 						</div>
+					
+						
 						<!-- Навигация -->
 						<div class="header__nav">
 							<nav class="nav">
@@ -974,10 +979,12 @@
 				</div>
 			</footer>
 		</div>
+		<script src="./js/select-languages.js"></script>
 		<script src="./js/swipe-images.js"></script>
 		<script src="./js/reviews-letters.js"></script>
 		<script src="./js/radiobuttons.js"></script>
 		<script src="./js/windows.js"></script>
 		<script src="./js/main.js"></script>
+		
 	</body>
 </html>
