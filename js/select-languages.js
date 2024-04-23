@@ -30,28 +30,29 @@ document.addEventListener("DOMContentLoaded", function() {
   selectedCountryName.textContent = defaultCountry;
 
   headerLanguages.addEventListener("click", function(event) {
-    event.stopPropagation();
-    if (optionsList.style.display === "block") {
-      optionsList.style.display = "none";
-      iconSelect.style.transform = "rotate(90deg)"; // Сбросить поворот на 0 градусов
-      selectedCountryName.style.color = ""; // Сбросить цвет текста
-      selectedCountryName.style.textDecoration = ""; // Сбросить подчеркивание текста
-      iconSelect.style.color = "";
+    if (event.target === headerLanguages || event.target === selectedCountryName) {
+      event.stopPropagation();
+      if (optionsList.style.display === "block") {
+        optionsList.style.display = "none";
+        iconSelect.style.transform = "rotate(-90deg)"; // Reset rotation to 0 degrees
+      } else {
+        optionsList.style.display = "block";
+        iconSelect.style.transform = "rotate(90deg)";
+        iconSelect.style.color = "#FF5C31"; // Rotate the icon by 90 degrees
+      }
+      selectedCountryName.style.color = "#FF5C31"; // Change text color to red
+      selectedCountryName.style.textDecoration = "underline"; // Add underline to the text
     } else {
-      optionsList.style.display = "block";
-      iconSelect.style.color = "#FF5C31";
-      iconSelect.style.transform = "rotate(270deg)"; // Повернуть иконку на 180 градусов
-      selectedCountryName.style.color = "#FF5C31"; // Изменить цвет текста на красный
-      selectedCountryName.style.textDecoration = "underline"; // Добавить подчеркивание текста
+      optionsList.style.display = "none";
+      iconSelect.style.transform = "rotate(-90deg)";
+      iconSelect.style.color = "$color-black";// Reset rotation to 0 degrees
     }
   });
 
   window.addEventListener("click", function(event) {
     if (!event.target.closest(".custom-select")) {
       optionsList.style.display = "none";
-      iconSelect.style.transform = "rotate(-90deg)"; // Сбросить поворот на 0 градусов
-      selectedCountryName.style.color = ""; // Сбросить цвет текста
-      selectedCountryName.style.textDecoration = ""; // Сбросить подчеркивание текста
+      iconSelect.style.transform = "rotate(90deg)"; // Reset rotation to 0 degrees
     }
   });
 });
