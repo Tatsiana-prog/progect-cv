@@ -830,7 +830,7 @@ ul {
 
 .section-about {
   padding: 100px 0 164px 0;
-  background: url(../../img/about/about-bg.png) no-repeat center;
+  background: url(../img/about/about-bg.png) no-repeat center;
   background-size: cover; }
   @media (max-width: 768px) {
     .section-about {
@@ -1006,7 +1006,8 @@ ul {
       right: 50px; } }
 
 .experience {
-  padding: 120px 0 134px 0; }
+  position: relative;
+  padding: 120px 120px 134px 120px; }
   @media (max-width: 430px) {
     .experience {
       padding-bottom: 0; } }
@@ -1019,6 +1020,7 @@ ul {
       padding-left: 0; } }
 
 .experience__column-wrapper {
+  position: relative;
   display: flex; }
   @media (max-width: 768px) {
     .experience__column-wrapper {
@@ -1029,6 +1031,24 @@ ul {
       .experience__column-wrapper .experience__column:nth-child(4) .experience__block:nth-child(2),
       .experience__column-wrapper .experience__column:nth-child(5) .experience__block:nth-child(1) {
         display: none; } }
+
+.experience__column-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  height: 1px;
+  width: 120px;
+  background: linear-gradient(to right, white, rgba(0, 0, 0, 0.1)); }
+
+.experience__column-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  height: 1px;
+  width: 120px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), white); }
 
 .experience__column {
   position: relative; }
@@ -1064,6 +1084,9 @@ ul {
       .experience__column:nth-child(2) .experience__block:nth-child(1)::before, .experience__column:nth-child(4) .experience__block:nth-child(1)::before {
         top: 0; } }
 
+.experience__column:nth-child(5) .experience__block:nth-child(2) {
+  border-top: 1px solid transparent; }
+
 .experience__column:first-child .experience__block:nth-child(1)::before, .experience__column:nth-child(3) .experience__block:nth-child(1)::before, .experience__column:nth-child(5) .experience__block:nth-child(1)::before {
   display: none; }
 
@@ -1077,7 +1100,7 @@ ul {
   width: 100%;
   height: 1px;
   background: linear-gradient(to right, #ffffff, #FF5C31, #ffffff);
-  top: 44%;
+  top: 50%;
   left: -50%; }
 
 .experience__block {
@@ -1272,6 +1295,7 @@ ul {
   position: relative; }
 
 .education__column:first-child::before {
+  display: none;
   top: 0;
   left: 0;
   transform: translateX(50%);
@@ -1280,6 +1304,9 @@ ul {
   width: 50%;
   height: 1px;
   background: #FF5C31; }
+  @media (max-width: 768px) {
+    .education__column:first-child::before {
+      display: block; } }
 
 .languages__list li {
   position: relative;
