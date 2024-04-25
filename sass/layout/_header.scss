@@ -5,8 +5,8 @@
     background: $color-white;
     //*mobile
     @media (max-width: 768px) {
+        padding: 0;
         display: block;
-        height: 70px;
         width: 100%;
         position: fixed;
         top: 0;
@@ -17,6 +17,10 @@
         background-size: cover;
         
     }
+     //*mobile xs
+     @media (max-width: 430px) {
+      
+     }
 
 }
 .element-mobile {
@@ -29,6 +33,7 @@
     & img {
        // height: 130px;
         width: 100%;
+        object-fit: contain;
     }
 }
 
@@ -36,17 +41,23 @@
 .header-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: flex-end;
     //*mobile
     @media (max-width: 768px) {
-       margin-top: 25px;
+        height:120px;
     }
-    //*mobile xs
+
+     //*mobile
+     @media (max-width: 575px) {
+        height: 100px;;
+    }
+       //*mobile xs
     @media (max-width: 430px) {
-        margin-top: 15px;
-        width: 370px;
-        padding: 0 5px ;
+       height: 90px;
     }
+   
 }
 
 .social {

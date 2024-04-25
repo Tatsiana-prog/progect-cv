@@ -20,11 +20,15 @@
     border-radius: 15px;
     border: 1px solid $color-accent;
     background: $color-white;
-    
+    //*mobile big
+    @media (max-width: 768px) {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+  }
+}
 
-    }
-  
-    .nav a {
+.nav__link {
       display: inline-block;
       //width: 50%;
       text-align: left;
@@ -33,22 +37,28 @@
       color: $color-black;
       padding-bottom: 5px;
       border-bottom: 2px solid transparent;
-      &:hover {
-        transition: all 0.3s ease-in;
-        font-weight: 500;
-        border-bottom: 2px solid $color-black;
-        font-weight: 700;
-      }
-    }
-    
-    .nav.nav--active {
+       //*mobile big
+        @media (max-width: 768px) {
+          top:10px;
+          text-align: center;
+        }
+        &:hover {
+          transition: all 0.3s ease-in;
+          font-weight: 500;
+          border-bottom: 2px solid $color-black;
+          font-weight: 700;
+        }
+}
+.nav.nav--active {
       display: block;
       top: -28px;
       right: -21px;
       opacity: 1;
       transition: top 0s linear, opacity .2s ease-in;
       z-index: 11;
+      //*mobile big
+    @media (max-width: 768px) {
+      top:5px;
+      text-align: center;
     }
-  
-   
-  
+}
