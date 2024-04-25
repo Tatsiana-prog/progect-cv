@@ -1,32 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
   const cardContainer = document.querySelector(".skills__row");
+  const softSkillsBtn = document.querySelector(".arrow-right");
+  const hardSkillsBtn = document.querySelector(".arrow-left");
+  const slideWidth = document.querySelector(".column__wrapper").offsetWidth;
 
-  // Прокрутка к началу слайдера при загрузке страницы
-  cardContainer.scrollLeft = 0;
+  let currentSlide = 0;
 
-  let startX;
-  let scrollLeft;
-  let isDown = false;
-
-  cardContainer.addEventListener("mousedown", function(e) {
-    isDown = true;
-    startX = e.pageX - cardContainer.offsetLeft;
-    scrollLeft = cardContainer.scrollLeft;
+  softSkillsBtn.addEventListener("click", function() {
+    currentSlide++;
+    if (currentSlide >= cardContainer.childElementCount) {
+      currentSlide = 0;
+    }
+    cardContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   });
 
-  cardContainer.addEventListener("mouseleave", function() {
-    isDown = false;
-  });
-
-  cardContainer.addEventListener("mouseup", function() {
-    isDown = false;
-  });
-
-  cardContainer.addEventListener("mousemove", function(e) {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - cardContainer.offsetLeft;
-    const walk = (x - startX) * 3; // Множитель для скорости движения
-    cardContainer.scrollLeft = scrollLeft - walk;
+  hardSkillsBtn.addEventListener("click", function() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = cardContainer.childElementCount - 1;
+    }
+    cardContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   });
 });
