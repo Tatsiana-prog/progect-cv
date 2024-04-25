@@ -82,21 +82,38 @@ function copyToClipboard() {
   document.body.removeChild(tempInput);
   alert("Ссылка скопирована в буфер обмена!");}
 
-
-
-//показ окон в блоке experience
-const experienceBlocks = document.querySelectorAll('.experience__column .experience__block');
-const experienceScrolls = document.querySelectorAll('.experience__column .experience__scroll');
-const experienceContents = document.querySelectorAll('.experience__column .experience__content');
-
-for (let i = 0; i < experienceBlocks.length; i++) {
-  experienceScrolls[i].addEventListener('click', () => {
-    experienceContents[i].classList.toggle('show');
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const experienceBlocks = document.querySelectorAll('.experience__block');
+    const lastExperienceBlock = experienceBlocks[experienceBlocks.length - 1];
+    const lastExperienceContent = lastExperienceBlock.querySelector('.experience__content');
+    const boxElement1 = lastExperienceBlock.querySelector('.box-element1');
+    const boxElement2 = lastExperienceBlock.querySelector('.box-element2');
+  
+    lastExperienceContent.classList.add('show');
+    boxElement1.classList.add('accent-element');
+    boxElement2.style.display = "block";
+  
+    const experienceScrolls = document.querySelectorAll('.question__icon');
+  
+    experienceScrolls.forEach((scroll, index) => {
+      scroll.addEventListener('click', () => {
+        const experienceBlock = scroll.closest('.experience__block');
+        const experienceContent = experienceBlock.querySelector('.experience__content');
+  
+        experienceContent.classList.toggle('show');
+  
+        if (experienceContent.classList.contains('show')) {
+          const boxElement1 = experienceBlock.querySelector('.box-element1');
+          const boxElement2 = experienceBlock.querySelector('.box-element2');
+          boxElement1.classList.add('accent-element');
+          boxElement2.style.display = "block";
+        } else {
+          const boxElement1 = experienceBlock.querySelector('.box-element1');
+          const boxElement2 = experienceBlock.querySelector('.box-element2');
+          boxElement1.classList.remove('accent-element');
+          boxElement2.style.display = "none";
+        }
+      });
+    });
   });
-}
-
-function selectItem(value) {
-  var label = document.querySelector('.dropdown-label');
-  label.textContent = value; // Use textContent to update label text
-}
-

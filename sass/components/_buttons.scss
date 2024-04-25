@@ -26,6 +26,7 @@
 }
 
 .btn.btn-white {
+    width: 232px;
     padding: 12px 58px;
     background: $color-white;
     color:$color-dark;
@@ -33,7 +34,8 @@
     text-align: center;
     font-size: 25px;
     &:hover {
-        background: rgba(56, 56, 56 , 0.03);
+        transition: all 0.2s linear;
+        background: rgba(56, 56, 56 , 0.1);
         border: 1px solid $color-dark;
     }
 }
