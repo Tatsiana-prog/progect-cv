@@ -40,6 +40,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+     //*mobile big
+     @media (min-width: 1441px) {
+      width: 822px;
+      height: 817px;
+
+  }
 }
 .hidden {
   display: none;
@@ -68,7 +74,10 @@
   height: 525px;
   font-size: 14px;
   line-height: 1.6;
-}
+  //*mobile big
+  @media (min-width: 1441px) {
+    height: 430px;
+}}
 
 .letter__text::-webkit-scrollbar {
   right: 50px;

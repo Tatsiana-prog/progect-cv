@@ -1,0 +1,20 @@
+.dots-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.2rem;
+}
+.dot {
+  cursor: pointer;
+  background:$color-grey;
+  height: 4px;
+  width: 40px;
+  border-radius: 100px;
+  position: relative;
+  margin-bottom: 70px;
+ // background: #C1B6AD;
+}
+
+
+.dot.active  {
+    background:$color-accent;
+  }

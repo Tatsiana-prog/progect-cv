@@ -10,8 +10,22 @@
     justify-content: space-between;
     align-items: center;
 }
+.footer__box .footer__secq {
+    display: none;
+    //*mobile big
+    @media (max-width: 768px) {
+       display: block;
+    }
+}
+
+.button__wrapper {  
+    //*mobile big
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
 .footer__box {
-    width: 50%;
     display: flex;
     justify-content: space-between;
     //*mobile big

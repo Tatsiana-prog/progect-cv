@@ -1,9 +1,9 @@
+//slider REVIEWS begin
 .arrow-wrapper {
     display: flex;
     justify-content: center;
     column-gap: 81px;
 }
-
 .button-prev,
 .button-next,
 .slider-wrapper
@@ -79,13 +79,12 @@
     }
 }
 
-
-
-
 .review:last-child {
   margin-right: 0;
 }
-
+.disabled {
+ opacity: 0.3;
+}
 //скроллбар
 .reviews-letter .ps__thumb-x,
 .reviews-letter .ps__thumb-y {
@@ -97,3 +96,79 @@
 .reviews-letter .ps__thumb-y:hover {
   background-color: #555;
 }
+
+//slider REVIEWS end
+
+
+//slider SKILLS
+.carousel-line1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  column-gap: 80px;
+  left: 0;
+  transition: 2s ease-out;
+  margin-bottom: 164px;
+  //*tablet small
+  @media (max-width: 991px) {
+    justify-content: flex-start;
+    }
+    
+}
+
+
+.carousel-wrapper {
+  margin-bottom: 35px;
+  margin: 0 auto;
+   //*tablet small
+   @media (max-width: 991px) {
+    width: 646px;
+  }
+   //*mobile big
+   @media (max-width: 768px) {
+    width: 490px;
+  }
+  //*mobile
+  @media (max-width: 575px) {
+      width: 390px;
+  }
+  //*mobile xs
+  @media (max-width: 430px) {
+      width: 330px;
+  }
+}
+
+.carousel__arrow-next {
+  position: absolute;
+  display: none;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  top:-40px;
+  left: 50%;
+  transform: translateX(-50%);
+  //*tablet small
+  @media (max-width: 991px) {
+   display: flex;
+   column-gap: 10px;
+   align-items: center;
+  }
+}
+
+ .carousel__arrow-prev {
+  position: absolute;
+  display:none;
+  color: rgba(0, 0, 0, 0.5);
+  column-gap: 10px;
+  font-size: 20px;
+  top:-40px;
+  left: 50%;
+  transform: translateX(-50%);
+  //*tablet small
+  @media (max-width: 991px) {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+}
+
