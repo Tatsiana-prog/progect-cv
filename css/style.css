@@ -1557,6 +1557,7 @@ ul {
   color: #000000; }
 
 .document {
+  text-decoration: none;
   color: #FF5C31;
   font-weight: 500; }
   .document:hover {
@@ -1684,7 +1685,8 @@ ul {
       width: 360px; } }
   @media (max-width: 430px) {
     .skills__column {
-      width: 330px; } }
+      width: 330px;
+      height: 860px; } }
 
 @media (max-width: 991px) {
   .column__wrapper:first-child .skills__column {
