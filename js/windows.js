@@ -71,3 +71,22 @@ document.addEventListener("DOMContentLoaded", function() {
       windowSecq.style.display = "none";
   });
 });
+
+
+//окно more-text
+document.addEventListener("DOMContentLoaded", function() {
+  const linkMore = document.querySelector(".link-more");
+  const btnCloseMore = document.querySelector(".btn-close__more");
+  const moreText = document.querySelector(".more-text");
+  const overlay = document.querySelector(".overlay");
+
+  linkMore.addEventListener("click", function() {
+    moreText.style.display = "block";
+    overlay.style.display = "block";
+  });
+
+  btnCloseMore.addEventListener("click", function() {
+    moreText.style.display = "none";
+    overlay.style.display = "none";
+  });
+});

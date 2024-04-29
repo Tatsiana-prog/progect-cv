@@ -27,7 +27,7 @@
 .about__row {
     position: relative;
     display: flex;
-    column-gap: 33px;
+    column-gap: 27px;
     //*tablet small
     @media (max-width: 991px) {
         flex-direction: column;
@@ -109,18 +109,12 @@
 .text-element1::before {
     position: absolute;
     content: "";
-    width: 85%;
+    width: 100%;
     height: 20px;
     top:2px;
     left: 0px;
     background: url(../img/about/item-1.png) no-repeat center;
-    background-size: cover;
-    //*tablet small
-    @media (max-width: 991px) {
-        width: 70%;
-        left: 0px;
-    }
-}
+    background-size: cover;}
 
 .text-element2::before {
     position: absolute;
@@ -131,11 +125,6 @@
     left: 0px;
     background: url(../img/about/item-2.png) no-repeat center;
     background-size: cover;
-     //*tablet small
-     @media (max-width: 991px) {
-        width: 77%;
-        left: 0px;
-    }
 }
 
 .text-element3::before {
@@ -143,7 +132,7 @@
     content: "";
     width: 70%;
     height: 17px;
-    top:2px;
+    top:5px;
     left: 0px;
     background: url(../img/about/item-3.png) no-repeat center;
     background-size: cover;
@@ -378,12 +367,12 @@
 .box-element2 {
     display: none;
     position: absolute;
-    top:-1;
+    //top:0;
     left: -100px;
     content: "";
     width: 200px;
     height: 1px;
-    background:linear-gradient(to right, $color-white, $color-accent, $color-white);
+    background:linear-gradient(to right, $color-grey, $color-accent, $color-grey);
     z-index: 2;
     transition: all 0.5s linear;
     //*tablet small
@@ -424,7 +413,7 @@
         }
     }
      & .box-element2 {
-        bottom:-1px;
+        bottom:-2px;
         left: -100px;
         //*tablet small
     @media (max-width: 991px) {
@@ -455,12 +444,12 @@
     font-weight: 500;
     color: $color-accent;
     text-decoration: underline;
-    margin-bottom: 15px;
+   
 }
 
-.experience__scroll {
-    display: block;
+.experience__block .question__icon {
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .experience__content {
@@ -482,13 +471,14 @@
     font-size: 14px;
     line-height: 1.9;
     color: #000;
+    height: auto;
      //*tablet small
      @media (max-width: 991px) {
         width: 130%;
     }
     //*mobile xs
     @media (max-width: 575px) {
-        height: auto;
+        
     }
 }
 .experience__column:nth-child(4) .experience__content.show {
@@ -511,6 +501,9 @@
 }
 
 .experience__column:nth-child(5) .experience__block:nth-child(2) {
+    & .experience__content {
+        height: 300px;
+    }
     & .experience__content.show {
         display: block;
         left: -150%;
@@ -526,6 +519,82 @@
     list-style-type: disc;
     margin-bottom: 40px;
 }
+.link-more {
+    color:$color-accent;
+    text-align: right;
+    font-weight: 500;
+    &:hover {
+        text-decoration:underline;
+    }
+}
+.more-text {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 86px 40px 60px 64px ;
+    border-radius: 15px;
+    background: $color-grey;
+    border: 1px solid black;
+    width: 657px; /* Ширина окна не более 80% от ширины страницы */
+    height: 560px; /* Высота окна не более 80% от высоты страницы */
+    overflow-y: auto; /* Добавление вертикальной прокрутки при необходимости */
+}
+.btn-close__more {
+    position: absolute;
+    top:18px;
+    right: 18px;
+}
+
+.experience__content .overlay {
+    opacity: 0.5;
+}
+.text-more__wrapper {
+    width: 97%;
+    margin-left: 0;
+    margin-right: auto;
+    height: 414px;
+    overflow-y: auto;
+}
+
+.text-more__wrapper::-webkit-scrollbar {
+    right: 50px;
+    background:#c8c7c7;
+    width: 2px;
+    height: 1px;
+}
+
+.text-more__wrapper::-webkit-scrollbar-track {
+    background:#c8c7c7;
+    border: 54px solid transparent;
+    background-clip: content-box;
+}
+
+.text-more__wrapper::-webkit-scrollbar-thumb {
+    background: $color-white;
+    border: 35px solid rgb(105, 102, 102);
+    border-radius: 4px;
+}
+
+.name-text {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 35px;
+}
+.more-list {
+    width: 516px;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 1.4;
+  
+}
+
+.subname-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
 
 //блок образование и курсы
 .education {

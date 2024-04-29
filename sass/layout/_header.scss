@@ -78,8 +78,8 @@
     height: 33px;
 }
 .social-icon:hover {
-    transform: scale(1.1);
-    transition: all 0.5s linear;
+    transform: scale(1.2);
+    transition: all 0.25s linear;
     .icon-accent {
         stroke:$color-accent;
         transition:  all 0.5s linear;
@@ -101,10 +101,7 @@
     }
 }
 
-.icon-select {
-    transition: all 0.5s linear;
-    transform:rotate(90deg);
-}
+
 
 
 .options-list {
