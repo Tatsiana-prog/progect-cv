@@ -4,42 +4,29 @@ const prevButton = document.querySelector('.carousel__arrow-prev');
 const nextButton = document.querySelector('.carousel__arrow-next');
 let position = 0;
 
-const calculateCardWidth = () => {
-  const containerWidth = cards.offsetWidth;
-  const numCards = cards.children.length;
-  const gap = 80; // Gap between cards
-  return ((containerWidth - gap * (numCards - 1)) / numCards) + 'px';
-};
+const cardWidthWithGap = 430 + 80; // Width of each card plus the gap
 
 const nextSlide = () => {
-  const maxPosition = (cards.children.length - 1) * (cards.children[0].offsetWidth + 80);
+  const maxPosition = (cards.children.length - 1) * cardWidthWithGap;
   if (position < maxPosition) {
-    position += cards.children[0].offsetWidth + 80;
+    position += cardWidthWithGap;
   } else {
     position = 0;
-  }
+  }  
   cards.style.left = -position + 'px';
 };
 
 const prevSlide = () => {
   if (position > 0) {
-    position -= cards.children[0].offsetWidth + 80;
+    position -= cardWidthWithGap;
   } else {
-    position = (cards.children.length - 1) * (cards.children[0].offsetWidth + 80);
+    position = (cards.children.length - 1) * cardWidthWithGap;
   }
   cards.style.left = -position + 'px';
 };
 
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
-
-window.addEventListener('resize', () => {
-  position = 0;
-  cards.style.left = '0px';
-  cards.style.width = calculateCardWidth();
-});
-
-cards.style.width = calculateCardWidth();
 
 //подключение карусели end
 
