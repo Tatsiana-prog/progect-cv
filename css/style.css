@@ -286,7 +286,7 @@ ul {
   position: relative;
   column-gap: 50px;
   left: 0;
-  transition: 2s ease-out; }
+  transition: 1s ease-out; }
 
 .slider-wrapper {
   overflow: hidden;
@@ -1677,36 +1677,38 @@ ul {
 
 .curces__list {
   width: 458px;
-  height: 395px; }
+  height: 395px;
+  overflow-y: auto; }
   @media (max-width: 991px) {
     .curces__list {
       width: 100%; } }
   @media (max-width: 768px) {
     .curces__list {
+      overflow-y: auto;
       width: 90%;
       height: 633px; } }
 
 .curces__list::-webkit-scrollbar {
   right: 50px;
-  background: #c8c7c7;
+  background: #e8e6e6;
   width: 2px;
   height: 1px; }
 
 .curces__list::-webkit-scrollbar-track {
-  background: #c8c7c7;
+  background: #e8e6e6;
   border: 54px solid transparent;
   background-clip: content-box; }
 
 .curces__list::-webkit-scrollbar-thumb {
   background: #ffffff;
-  border: 35px solid #696666;
+  border: 35px solid rgba(105, 102, 102, 0.5);
   border-radius: 4px; }
 
 .curces__list li {
   position: relative;
   font-size: 14px;
   margin-bottom: 15px;
-  padding-left: 30px;
+  padding-left: 20px;
   cursor: pointer; }
   .curces__list li::before {
     content: "";

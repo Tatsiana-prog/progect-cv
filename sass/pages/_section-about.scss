@@ -867,14 +867,14 @@
 .curces__list {
    width: 458px;
    height: 395px;
-   // overflow-y: auto;
-     //*tablet small
+    overflow-y: auto;
+    //*tablet small
      @media (max-width: 991px) {
         width: 100%;
     }
     //*mobile big
     @media (max-width: 768px) {
-        //overflow-y: auto;
+        overflow-y: auto;
         width: 90%;
         height: 633px;
     }
@@ -882,20 +882,20 @@
 
 .curces__list::-webkit-scrollbar {
     right: 50px;
-    background:#c8c7c7;
+    background:#e8e6e6;
     width: 2px;
     height: 1px;
 }
 
 .curces__list::-webkit-scrollbar-track {
-    background:#c8c7c7;
+    background:#e8e6e6;
     border: 54px solid transparent;
     background-clip: content-box;
 }
 
 .curces__list::-webkit-scrollbar-thumb {
     background: $color-white;
-    border: 35px solid rgb(105, 102, 102);
+    border: 35px solid rgba(105, 102, 102, 0.5);
     border-radius: 4px;
 }
 
@@ -903,7 +903,7 @@
     position: relative;
     font-size: 14px;
     margin-bottom: 15px;
-    padding-left: 30px;
+    padding-left: 20px;
     cursor: pointer;
     &::before {
         content: "";
