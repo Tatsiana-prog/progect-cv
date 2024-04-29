@@ -7,116 +7,16 @@
 .reviews {
     max-width: 1226px;
 }
+
 .reviews__title {
     margin-bottom: 80px;
 }
-.title-3 {
-}
-.slider-wrapper {
-}
-.slider-line {
-}
-.review {
-}
-.review__name {
-}
-.review__text {
-}
-.review__doc {
+
+.document.doc {
     font-size: 20px;
     font-weight: 600;
-}
+    &:hover {
+      text-decoration: underline;
+    }
 
-.reviews-letter {
-    position: fixed;
-    padding: 40px 47px;
-    width: 70%;
-    height: 90%;
-    border-radius: 15px;
-    background: #202020;
-    color:$color-white;
-    text-align: center;
-    z-index: 99;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-     //*mobile big
-     @media (min-width: 1441px) {
-      width: 822px;
-      height: 817px;
-
-  }
-}
-.hidden {
-  display: none;
-}
-.reviews-letter.hidden {
-  display: none;
-}
-
-.letter-title  {
-    margin-bottom: 5px;
-}
-.letter-subtitle {
-    font-size: 16px;
-    margin-bottom: 25px;
-}
-.letter-content {
-  padding: 71px 41px 81px 81px;
-  border-radius: 15px;
-  background: #252525;
- 
-}
-
-.letter__text {
-  padding-right: 45px;
-  text-align: left;
-  overflow-y: auto;
-  height: 525px;
-  max-width: 566px;
-  font-size: 14px;
-  line-height: 1.6;
-  //*mobile big
-  @media (min-width: 1441px) {
-    height: 430px;
-}}
-
-.letter__text::-webkit-scrollbar {
-  right: 50px;
-  background: #888;
-  width: 3px;
-}
-
-.letter__text::-webkit-scrollbar-track {
-  background: #888;
-  border: 54px solid transparent;
-  background-clip: content-box;
-}
-
-.letter__text::-webkit-scrollbar-thumb {
-  background: $color-white;
-  border: 35px solid $color-white;
-  border-radius: 4px;
-}
-
-.reviews-letter > .file-save > .summary {
-  color:rgba(120, 118, 118, 1)
-
-}
-
-.reviews-letter > .file-save > .summary:before {
-  background: #838383;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
-  z-index: 0;
-  display: none;
-}
-.reviews-letter .file-save {
-  margin-top: 38px;
 }
