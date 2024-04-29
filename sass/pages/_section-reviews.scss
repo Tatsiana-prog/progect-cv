@@ -65,6 +65,7 @@
   padding: 71px 81px 81px 81px;
   border-radius: 15px;
   background: #252525;
+ 
 }
 
 .letter__text {
@@ -72,6 +73,7 @@
   text-align: left;
   overflow-y: auto;
   height: 525px;
+  max-width: 566px;
   font-size: 14px;
   line-height: 1.6;
   //*mobile big

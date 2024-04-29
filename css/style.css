@@ -542,6 +542,9 @@ ul {
     color: #FF5C31;
     text-decoration: underline; }
 
+.icon-select {
+  transform: rotate(90deg); }
+
 .options-list {
   display: none;
   position: absolute;
@@ -2172,6 +2175,7 @@ ul {
   text-align: left;
   overflow-y: auto;
   height: 525px;
+  max-width: 566px;
   font-size: 14px;
   line-height: 1.6; }
   @media (min-width: 1441px) {
