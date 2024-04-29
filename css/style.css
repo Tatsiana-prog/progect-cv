@@ -2223,7 +2223,7 @@ ul {
       flex-direction: column; } }
 
 .contacts__content {
-  padding: 98px 0 0 132px; }
+  padding: 98px 0 13px 132px; }
   @media (max-width: 768px) {
     .contacts__content {
       padding: 0;
@@ -2276,11 +2276,9 @@ ul {
 .contacts__content .file-save {
   margin-top: 0; }
 
-.contacts__image {
-  width: 100%; }
-  .contacts__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; }
+.contacts__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */

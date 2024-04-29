@@ -37,7 +37,7 @@ const carouselLine2 = document.querySelector('.slider-line');
 const prevButtonCarousel2 = document.querySelector('.button-prev');
 const nextButtonCarousel2 = document.querySelector('.button-next');
 const dots = document.querySelectorAll('.dot');
-const slideWidth = 480; // Ширина слайда
+const slideWidth = 420; // Ширина слайда
 let positionCarouselRev = 0;
 let dotIndex = 0;
 
