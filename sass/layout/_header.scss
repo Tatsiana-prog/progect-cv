@@ -46,6 +46,10 @@
     align-items: flex-end;
     margin-left: auto;
     margin-right: auto;
+    //*tablet 
+    @media (max-width: 1399px) {
+        width: 1200px;
+    }
     //*tablet small
     @media (max-width: 991px) {
         width: 769px;

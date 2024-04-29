@@ -1,11 +1,17 @@
 
 .section-description {
   //display: none;
+  
 
 }
 .description {
     position: relative;
     padding-left: 36px;
+    //*tablet 
+  @media (max-width: 1399px) {
+    max-width: 1200px;
+    margin: 0 auto;
+}
     //*mobile
      @media (max-width: 768px) {
         padding-left: 0;
@@ -78,6 +84,10 @@
   left: 5%;
   transform: translateY(-50%);
   z-index: 10;
+  //*tablet 
+  @media (max-width: 1399px) {
+    width: 50%;
+}
   //*tablet small
   @media (max-width: 991px) {
     left: 15%;
