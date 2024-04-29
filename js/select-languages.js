@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const option = document.createElement("li");
     option.textContent = country;
 
+    // Скрыть выбранный элемент по умолчанию ("RU") из списка
+    if (country === "RU") {
+      option.style.display = "none";
+      option.classList.add("selected");
+    }
+
     option.addEventListener("click", function() {
       const selectedCountryData = this.textContent;
 
@@ -18,41 +24,43 @@ document.addEventListener("DOMContentLoaded", function() {
         selectedCountryName.textContent = selectedCountryData;
         optionsList.style.display = "none";
 
-        console.log(selectedCountryData);
+        // Показать предыдущий выбранный элемент и скрыть текущий выбранный элемент
+        const prevSelectedOption = optionsList.querySelector(".selected");
+        if (prevSelectedOption) {
+          prevSelectedOption.style.display = "block";
+          prevSelectedOption.classList.remove("selected");
+          iconSelect.style.transform = "rotate(90deg)";
+          iconSelect.style.color = "black"; // Сбросить поворот на 0 градусов и вернуть черный цвет
+        }
+        this.style.display = "none";
+        this.classList.add("selected");
+        iconSelect.style.color = "black"; // Установить цвет иконки на черный
       }
     });
 
     optionsList.appendChild(option);
   });
 
-  const defaultCountry = "RU"; // Страна по умолчанию
+  const defaultCountry = "RU"; // Выбранная страна по умолчанию
 
   selectedCountryName.textContent = defaultCountry;
 
-  headerLanguages.addEventListener("click", function(event) {
-    if (event.target === headerLanguages || event.target === selectedCountryName) {
-      event.stopPropagation();
-      if (optionsList.style.display === "block") {
-        optionsList.style.display = "none";
-        iconSelect.style.transform = "rotate(-90deg)"; // Reset rotation to 0 degrees
-      } else {
-        optionsList.style.display = "block";
-        iconSelect.style.transform = "rotate(90deg)";
-        iconSelect.style.color = "#FF5C31"; // Rotate the icon by 90 degrees
-      }
-      selectedCountryName.style.color = "#FF5C31"; // Change text color to red
-      selectedCountryName.style.textDecoration = "underline"; // Add underline to the text
-    } else {
+  selectedCountry.addEventListener("click", function(event) {
+    event.stopPropagation();
+    if (optionsList.style.display === "block") {
       optionsList.style.display = "none";
-      iconSelect.style.transform = "rotate(-90deg)";
-      iconSelect.style.color = "$color-black";// Reset rotation to 0 degrees
+      iconSelect.style.transform = "rotate(90deg)"; // Сбросить поворот на 0 градусов
+      iconSelect.style.color = "black"; // Сбросить цвет на черный
+    } else {
+      optionsList.style.display = "block";
+      iconSelect.style.transform = "rotate(270deg)"; // Повернуть иконку на 90 градусов
+      iconSelect.style.color = "#FF5C31"; // Изменить цвет на красный
     }
   });
 
-  window.addEventListener("click", function(event) {
+  document.addEventListener("click", function(event) {
     if (!event.target.closest(".custom-select")) {
       optionsList.style.display = "none";
-      iconSelect.style.transform = "rotate(90deg)"; // Reset rotation to 0 degrees
     }
   });
 });

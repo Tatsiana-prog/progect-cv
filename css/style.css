@@ -538,7 +538,7 @@ ul {
   color: #000000;
   font-size: 20px; }
   #selected-language-name:hover {
-    transition: all 1s linear;
+    transition: all 0.3s linear;
     color: #FF5C31;
     text-decoration: underline; }
 
@@ -564,7 +564,9 @@ ul {
   padding: 2px 0;
   cursor: pointer; }
   .options-list li:hover {
-    color: #FF5C31; }
+    color: #FF5C31;
+    text-decoration: underline;
+    transition: all 0.3s linear; }
 
 .header__nav {
   position: relative; }
