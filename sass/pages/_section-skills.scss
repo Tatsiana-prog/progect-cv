@@ -6,13 +6,12 @@
     }
 }
 
-
 .column__wrapper {
     position: relative;
     flex-shrink: 0;
     width: 546px;
      //*tablet small
-   @media (max-width: 991px) {
+   @media (max-width: 1191px) {
     width: 525px;
   }
    //*mobile big

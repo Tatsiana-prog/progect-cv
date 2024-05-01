@@ -3,9 +3,8 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-     //*mobile big
-     @media (max-width: 768px) {
-        max-width: 768px;
+     //*tablet
+     @media (max-width: 991px) {
         flex-direction: column;
     }
 }

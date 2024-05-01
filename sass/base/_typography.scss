@@ -124,12 +124,16 @@ ul {
     font-weight: 500;
     color:$color-black;
     letter-spacing: -8px;
-    //*mobile
-    @media (max-width: 768px) {
-        font-size: 35px;
+    //*tablet
+    @media (max-width: 1199px) {
+        font-size: 55px;
         text-align: center;
         letter-spacing: 0;
         font-weight: 800;
+      }
+    //*mobile
+    @media (max-width: 768px) {
+        font-size: 35px;
       }
 }
 
