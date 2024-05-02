@@ -1958,9 +1958,9 @@ ul {
 @media (max-width: 991px) {
   .column__wrapper:first-child .skills__column {
     height: 635px; } }
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .column__wrapper:first-child .skills__column {
-    height: 706px; } }
+    height: 793px; } }
 
 .carousel-right {
   position: absolute;

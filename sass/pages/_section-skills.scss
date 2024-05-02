@@ -64,11 +64,10 @@
     @media (max-width: 991px) {
        height: 635px;
     }
-    //*mobile
-    @media (max-width: 575px) {
+    //*mobilel
+    @media (max-width: 768px) {
         height: 793px;
-    }
-    
+     }
 }
 .skills__slider {
     //*mobile big
