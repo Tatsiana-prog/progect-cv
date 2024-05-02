@@ -37,8 +37,8 @@
 }
 
 .slider-wrapper {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
   margin-bottom: 35px;
 }
 
@@ -51,6 +51,7 @@
   width: 370px;
   height: 373px;
   border-radius: 15px;
+  border:1px solid $color-accent;
   background: rgba(56, 56, 56, 0.03);
   color: $color-black;
   margin: 0 auto;

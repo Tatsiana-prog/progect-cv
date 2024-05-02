@@ -83,10 +83,16 @@
           object-fit: cover;
           }
       }
-      //*mobile xs
+      //tablet
       @media (max-width: 430px) {
-          height: 275px;
-      }
+        width: 430px;
+        display: block;
+        & img {
+        width: 430px;
+        height: auto;
+        object-fit: cover;
+        }
+    }
       
   }
   

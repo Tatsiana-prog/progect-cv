@@ -39,11 +39,31 @@
         height: 190px;
         max-width: 991px;
         object-fit: cover;
-       }
-    
+       } 
     }
-}
+    //*mobile 
+    @media (max-width: 768px) {
+        display: block;
+        height: 190px;
+        & img {
+         height: 190px;
+         max-width: 768px;
+         object-fit: cover;
+        }
+    }
 
+     //*mobile 
+     @media (max-width: 525px) {
+        display: block;
+        height: 190px;
+        & img {
+         height: 150px;
+         max-width: 525px;
+         object-fit: cover;
+        }
+     
+}
+}
 
 .header-row {
     display: flex;
