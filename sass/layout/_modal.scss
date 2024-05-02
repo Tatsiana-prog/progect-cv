@@ -56,8 +56,15 @@
       opacity: 1;
       transition: top 0s linear, opacity .2s ease-in;
       z-index: 11;
+
       //*mobile big
     @media (max-width: 768px) {
+      top:5px;
+      text-align: center; 
+      right: -122px;
+    }
+      //*mobile big
+    @media (max-width: 430px) {
       top:5px;
       text-align: center;
       right: -73px;

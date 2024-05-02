@@ -2,6 +2,7 @@
     padding: 100px 0 164px 0;
     background: url(../img/about/about-bg.png) no-repeat center;
     background-size: cover;
+    height: auto;
      //*mobile big
      @media (max-width: 768px) {
         border: none;
@@ -14,6 +15,7 @@
     //display: none;
     position: relative;
     padding: 0 0 93px 93px;
+    height: auto;
     //*tablet small
     @media (max-width: 991px) {
         padding: 0;
@@ -216,16 +218,17 @@
 
 //*опыт работы
 .experience {
+    height: auto;
     position: relative;
     padding: 120px 120px 120px 120px;
 
     //*tablet
     @media (max-width: 1399px) {
-        margin-bottom: 290px;
+        
     }
     //*tablet small
     @media (max-width: 991px) {
-        margin-bottom: 350px;
+       
     
        padding-left: 20px;
        padding-right: 20px;
@@ -236,7 +239,7 @@
 }
     //*mobile xs
  @media (max-width: 430px) {
-    margin-bottom: 650px;
+  
     padding-bottom: 0;
     }
 }
@@ -256,6 +259,7 @@
     height: 701px;
     //*tablet 
     @media (max-width: 1399px) {
+        height: auto;
         flex-direction: column;
         & .experience__column:first-child .experience__block:nth-child(1),
         .experience__column:nth-child(2) .experience__block:nth-child(2),
@@ -368,8 +372,10 @@
     cursor: pointer;
      //*tablet 
      @media (max-width: 1399px) {
+        height: auto;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       width: 80%;
     }
@@ -497,6 +503,8 @@
     height: auto;
       //*tablet 
     @media (max-width: 1399px) {
+        position: relative;
+        margin-top: 20px;
         left: 12%;
         width: 130%;
     }
@@ -558,6 +566,10 @@
     color:$color-accent;
     text-align: right;
     font-weight: 500;
+     //*tablet 
+     @media (max-width: 991px) {
+        display: none;
+    }
     &:hover {
         text-decoration:underline;
     }
@@ -581,6 +593,17 @@
     top:18px;
     right: 18px;
 }
+.text-more__mobile {
+    display: none;
+    //*tablet small
+    @media (max-width: 991px) {
+        display: block;
+    }
+}
+.text-more__mobile.text-more__wrapper {
+    width: 95%;
+}
+
 
 .experience__content .overlay {
     opacity: 0.5;
