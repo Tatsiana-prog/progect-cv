@@ -148,7 +148,8 @@ ul {
       width: 769px; } }
   @media (max-width: 768px) {
     .container {
-      width: 575px; } }
+      width: 575px;
+      padding: 0 15px; } }
   @media (max-width: 575px) {
     .container {
       width: 431px; } }
