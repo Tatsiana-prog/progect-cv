@@ -1560,6 +1560,9 @@ ul {
 .text-more__mobile.text-more__wrapper {
   width: 95%; }
 
+.text-more__mobile .more-list {
+  width: 80%; }
+
 .experience__content .overlay {
   opacity: 0.5; }
 
