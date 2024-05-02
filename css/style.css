@@ -1557,8 +1557,10 @@ ul {
     .text-more__mobile {
       display: block; } }
 
-.text-more__mobile.text-more__wrapper {
-  width: 95%; }
+.text-more__mobile .text-more__wrapper {
+  width: 95%;
+  height: auto;
+  overflow: visible; }
 
 .text-more__mobile .more-list {
   width: 80%; }

@@ -600,8 +600,10 @@
         display: block;
     }
 }
-.text-more__mobile.text-more__wrapper {
+.text-more__mobile .text-more__wrapper {
     width: 95%;
+    height: auto;
+    overflow: visible;
 }
 .text-more__mobile .more-list {
     width: 80%;
