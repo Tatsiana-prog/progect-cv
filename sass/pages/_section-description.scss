@@ -82,7 +82,7 @@
           object-fit: cover;
           }
       }
-      //tablet
+      //mobile
       @media (max-width: 768px) {
         display: block;
         height: 390px;
@@ -106,13 +106,15 @@
     }
       //mobile
       @media (max-width: 430px) {
-        width: 430px;
         display: block;
+        height: 270px;
         & img {
         width: 430px;
+        height: auto;
         object-fit: cover;
         }
-    }
+      }
+
       
   }
   

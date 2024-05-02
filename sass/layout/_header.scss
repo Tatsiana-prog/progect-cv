@@ -26,18 +26,19 @@
 .element-mobile {
     display: none;
     width: 100%;
-    height: 130px;
+    //height: 130px;
     position: absolute;
     top:0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     //*tablet 
     @media (max-width: 991px) {
        display: block;
+       width: 991px;
        height: 190px;
        & img {
         height: 190px;
-        max-width: 991px;
+        width: 991px;
         object-fit: cover;
        } 
     }
@@ -60,9 +61,20 @@
          max-width: 525px;
          object-fit: cover;
         }
+        
+     //*mobile 
+     @media (max-width: 430px) {
+        display: block;
+        height: 130px;
+        & img {
+         max-width: 430px;
+         height: 130px;
+         object-fit: cover;
+        }
+
      
 }
-}
+}}
 
 .header-row {
     display: flex;
@@ -99,7 +111,10 @@
     }
        //*mobile xs
     @media (max-width: 430px) {
-       
+        padding-left: 26px;
+        padding-right: 23px;
+        justify-content: center;
+        gap: 75px;
     }
    
 }

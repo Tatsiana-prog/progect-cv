@@ -308,6 +308,10 @@
     background: $color-white;
     z-index: 5;
     //*tablet small
+    @media (max-width: 1199px) {
+        left: 0;
+    }
+    //*tablet small
     @media (max-width: 991px) {
         width: 100%;
        left: 0;

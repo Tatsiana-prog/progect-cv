@@ -109,12 +109,18 @@
 .text-element1::before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 93%;
     height: 20px;
     top:2px;
     left: 0px;
     background: url(../img/about/item-1.png) no-repeat center;
-    background-size: cover;}
+    background-size: cover;
+    //*tablet 
+    @media (max-width: 1399px) {
+    display: none;
+    }
+
+}
 
 .text-element2::before {
     position: absolute;
@@ -125,6 +131,10 @@
     left: 0px;
     background: url(../img/about/item-2.png) no-repeat center;
     background-size: cover;
+    //*tablet 
+    @media (max-width: 1399px) {
+        display: none;
+        }
 }
 
 .text-element3::before {
@@ -136,11 +146,10 @@
     left: 0px;
     background: url(../img/about/item-3.png) no-repeat center;
     background-size: cover;
-    //*tablet small
-    @media (max-width: 1199px) {
-        width: 52%;
-        left: 0px;
-    }
+    //*tablet 
+    @media (max-width: 1399px) {
+        display: none;
+        }
 }
 
 .about__person {
@@ -196,6 +205,12 @@
     //*mobile xs
     @media (max-width: 430px) {
        right: 50px;
+       width: 127px;
+       height: 69px;
+       img {
+        width: 127px;
+        height: 69px;
+       }
     }
 }
 
@@ -467,7 +482,7 @@
 .experience__content.show {
     display: block;
     position: absolute;
-    left: 12%;
+    left: 5%;
     top:65%;
     padding: 14px 27px;
     border-radius: 15px;
@@ -501,7 +516,7 @@
 
 .experience__column:nth-child(1),  .experience__column:nth-child(3),  .experience__column:nth-child(5) {
     & .experience__content.show {
-        left: 0%;
+        left: 5%;
         top:110%;
          //*tablet 
     @media (max-width: 1399px) {
@@ -528,7 +543,7 @@
         top:80%;
          //*tablet 
     @media (max-width: 1399px) {
-            left: 0%;
+            left: 5%;
             top:60%;
     }
 }}
@@ -640,9 +655,11 @@
    background: $color-white;
    border-radius: 15px;
    border:1px solid $color-dark;
-   & .education__title {
-    margin-bottom: 45px;
-   }
+    //*tablet 
+    @media (max-width: 1399px) {
+        width: 432px;
+    }
+   
      //*tablet small
      @media (max-width: 991px) {
         position: relative;
@@ -654,6 +671,7 @@
     }
      //*mobile big
      @media (max-width: 768px) {
+       width: 416px;
        border: none;
        width: 100%;
        padding: 43px 35px ;
@@ -662,6 +680,9 @@
     @media (max-width: 430px) {
         padding: 25px 15px ;
     }
+    & .education__title {
+        margin-bottom: 45px;
+       }
 }
 
 .education__column:first-child {
