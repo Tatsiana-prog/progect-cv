@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
       optionsList.style.display = "block";
       iconSelect.style.transform = "rotate(270deg)"; // Повернуть иконку на 90 градусов
       iconSelect.style.color = "#FF5C31"; // Изменить цвет на красный
+      selectedCountryName.style.color =  "#FF5C31";
     }
   });
 

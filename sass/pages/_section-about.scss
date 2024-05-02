@@ -497,11 +497,12 @@
     height: auto;
       //*tablet 
     @media (max-width: 1399px) {
+        left: 12%;
         width: 130%;
     }
     //*mobile xs
     @media (max-width: 575px) {
-        
+        width: 120%; 
     }
 }
 .experience__column:nth-child(4) .experience__content.show {
@@ -521,6 +522,7 @@
          //*tablet 
     @media (max-width: 1399px) {
             top:75%;
+            left: 15%;
         }
         //*mobile xs
         @media (max-width: 575px) {
@@ -627,7 +629,9 @@
     font-size: 14px;
     font-weight: 500;
 }
-
+.experience__content ul {
+    list-style: none;
+}
 
 //блок образование и курсы
 .education {

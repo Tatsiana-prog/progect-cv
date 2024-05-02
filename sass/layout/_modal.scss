@@ -52,7 +52,7 @@
 .nav.nav--active {
       display: block;
       top: -28px;
-      right: -21px;
+      right: -25px;
       opacity: 1;
       transition: top 0s linear, opacity .2s ease-in;
       z-index: 11;
@@ -60,5 +60,8 @@
     @media (max-width: 768px) {
       top:5px;
       text-align: center;
+      right: -73px;
     }
+    
+   
 }
