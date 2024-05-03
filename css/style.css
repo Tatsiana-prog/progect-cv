@@ -571,6 +571,10 @@ ul {
       gap: 75px;
       height: 50px;
       margin-top: 30px; } }
+  @media (max-width: 390px) {
+    .header-row {
+      width: 390px;
+      height: 50px; } }
 
 .social {
   display: flex;
@@ -889,6 +893,12 @@ ul {
       width: 430px; }
       .description__image-mobile img {
         width: 430px;
+        height: 856px; } }
+  @media (max-width: 991px) and (max-width: 390px) {
+    .description__image-mobile {
+      width: 390px; }
+      .description__image-mobile img {
+        width: 390px;
         height: 856px; } }
 
 .description__element-bg {
@@ -1689,6 +1699,10 @@ ul {
   @media (max-width: 768px) {
     .education__column:first-child::before {
       display: block; } }
+
+@media (max-width: 390px) {
+  .education__list {
+    padding-left: 20px; } }
 
 @media (max-width: 991px) {
   .languages__list {
