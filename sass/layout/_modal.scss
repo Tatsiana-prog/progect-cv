@@ -68,7 +68,14 @@
       top:5px;
       text-align: center;
       right: -73px;
+    } 
+    //*mobile XR
+    @media (max-width: 414px) {
+      right: -57px;
+    } 
+    //*mobile 12Pro
+    @media (max-width: 390px) {
+      right: -54px;
     }
-    
    
 }

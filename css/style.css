@@ -703,6 +703,12 @@ ul {
       top: 5px;
       text-align: center;
       right: -73px; } }
+  @media (max-width: 414px) {
+    .nav.nav--active {
+      right: -57px; } }
+  @media (max-width: 390px) {
+    .nav.nav--active {
+      right: -54px; } }
 
 .nav-icon {
   width: 46px;
