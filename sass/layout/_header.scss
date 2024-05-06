@@ -169,7 +169,7 @@
 .options-list {
     display: none;
     position: absolute;
-    top:20px;
+    top:22px;
     left: -10px;
     list-style-type: none;
     margin: 0;
@@ -187,10 +187,17 @@
     align-items: center;
     padding: 2px 0;
     cursor: pointer;
+    & a {
+        color:$color-black;
+        &:hover {
+            color:$color-accent;
+            transition: all 0.2s linear;
+        }
+    }
     &:hover {
         color:$color-accent;
         text-decoration: underline;
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
     }
 }
 
